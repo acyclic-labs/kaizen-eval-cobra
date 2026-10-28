@@ -104,7 +104,9 @@ jobs:
     - uses: msys2/setup-msys2@v2
       with:
         msystem: MINGW64
-        update: true
+        # Skip the two full `pacman -Syuu` rounds: packages come from the (monthly)
+        # installer's database. MINGW64 is the workflow's critical path.
+        update: false
         install: >
           git
           make
