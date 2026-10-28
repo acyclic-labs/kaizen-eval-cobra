@@ -106,9 +106,7 @@ jobs:
         msystem: MINGW64
         update: true
         install: >
-          git
           make
-          unzip
           mingw-w64-x86_64-go
 
     - uses: actions/checkout@v4
